@@ -42,8 +42,8 @@ helper:
 
 # Details about the lessons
 lessons:
-  - title: Best Practices in Data Organisation Using Spreadsheets
-    gh-name: spreadsheets
+  - title: "Bash Shell: Using the Command Line"
+    gh-name: dirac-bash-command-line
     type: episode
     branch: main
     order: 1
