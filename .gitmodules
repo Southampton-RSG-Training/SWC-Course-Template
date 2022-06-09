@@ -1,6 +1,6 @@
-[submodule "submodules/spreadsheets"]
-	path = submodules/spreadsheets
-	url = https://github.com/Southampton-RSG-Training/spreadsheets.git
+[submodule "submodules/dirac-bash-command-line"]
+	path = submodules/dirac-bash-command-line
+	url = https://github.com/Southampton-RSG-Training/dirac-bash-command-line.git
 	branch = main
 [submodule "submodules/openrefine-data-cleaning"]
 	path = submodules/openrefine-data-cleaning
