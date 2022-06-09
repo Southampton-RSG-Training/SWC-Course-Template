@@ -10,7 +10,7 @@ kind: "course"
 # Most workshops don't use extra pages. More information about extra
 # pages are included in the README:
 # https://github.com/carpentries/workshop-template#creating-extra-pages
-title: "TBC Workshop Title"
+title: "Course Demo"
 
 # Specify the location of the workshop
 # TODO: needs documenting a lot better
@@ -84,9 +84,6 @@ collections:
   episodes:
     output: true
     permalink: /:slug
-  extras:
-    output: true
-    permalink: /:path/index
 collections_dir: collections
 
 include:
