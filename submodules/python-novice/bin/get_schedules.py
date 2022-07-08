@@ -67,9 +67,9 @@ def get_date_object(datestr):
         raise ValueError(f"datestr is not a string but {type(datestr)}")
 
     try:
-        date =  dateutil.parser.parse(datestr).date()
+        date = dateutil.parser.parse(datestr).date()
     except dateutil.parser.ParserError:
-        date =  None
+        date = None
 
     return date
 
@@ -105,9 +105,7 @@ def get_time_object(time_string):
 
 
 def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesson_title, website_kind):
-    """
-    Create a detailed lesson schedule landing page for each lesson in a workshop, or a section of the index for
-    standalone lessons
+    """Create a detailed lesson schedule landing page for each lesson.
 
     The schedule is based on a modifed version of syllabus.html to work better
     with the workshop format. This function also renames the ordering of
@@ -138,8 +136,7 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
         filepath.rename(f"{containing_directory}/{new_file_name}")
 
     if website_kind != 'lesson':
-        schedule_markdown = textwrap.dedent(f"""
-        ---
+        schedule_markdown = textwrap.dedent(f"""---
         lesson_title: '{lesson_title}'
         lesson_schedule_slug: {lesson_name}-schedule
         title: Lesson Schedule
@@ -152,7 +149,7 @@ def create_detailed_lesson_schedules(lesson_name, lesson_type, start_time, lesso
         with open(f"{containing_directory}/00-schedule.md", "w") as fp:
             fp.write("\n".join([line.lstrip() for line in schedule_markdown.splitlines()]))
     else:
-        # This is cheeky as it creates the index schedule but this is necessary the index is the detail for lessons
+        # This is cheeky as it creates the index schedule but this is necessary the index is the detail
         html = ""
         # Make the container to hold the schedules 'table'
         html += "<div class=\"container\">"
@@ -276,14 +273,29 @@ def main():
             if website_kind == 'workshop':
                 raise ValueError(f"gh-name, title, date, and start-time are required for workshop")
             if website_kind == 'course':
-                raise ValueError(f"gh-name, title, and order are required for course")
-            if website_kind == 'lesson':
-                raise ValueError(f"title and start-time are required for lesson")
+                raise ValueError(f"lesson_name, lesson_title, lesson_order are required for course")
 
 
         # Since we allow multiple dates and start times per lesson, we need to be
         # able to iterate over even single values so turn into list. When done,
         # convert the dates from str to datetime.date objects.
+
+        if website_kind == 'workshop':
+            if type(lesson_dates) is not list:
+                lesson_dates = [lesson_dates]
+            if type(lesson_starts) is not list:
+                lesson_starts = [lesson_starts]
+            lesson_dates = [get_date_object(date) for date in lesson_dates]
+
+        # Get the schedule(s) for the lesson into a dataframe and also the html
+        # so we can search for the permalinks.
+        p = Path("_includes/rsg/")
+        p.mkdir(parents=True, exist_ok=True)
+        if website_kind != 'lesson':
+            with open(f"_includes/rsg/{lesson_name}-lesson/schedule.html", "r") as fp:
+                schedule_html = fp.read()
+            soup = bs(schedule_html, "html.parser")
+            all_schedules = pandas.read_html(schedule_html, flavor="lxml")
 
         if website_kind == 'workshop':
             if type(lesson_dates) is not list:

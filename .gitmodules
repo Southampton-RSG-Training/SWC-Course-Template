@@ -1,15 +1,3 @@
-[submodule "submodules/dirac-bash-command-line"]
-	path = submodules/dirac-bash-command-line
-	url = https://github.com/Southampton-RSG-Training/dirac-bash-command-line.git
-	branch = main
-[submodule "submodules/openrefine-data-cleaning"]
-	path = submodules/openrefine-data-cleaning
-	url = https://github.com/Southampton-RSG-Training/openrefine-data-cleaning.git
-	branch = main
-[submodule "submodules/project-novice"]
-	path = submodules/project-novice
-	url = https://github.com/Southampton-RSG-Training/project-novice.git
-	branch = main
 [submodule "submodules/shell-novice"]
 	path = submodules/shell-novice
 	url = https://github.com/Southampton-RSG-Training/shell-novice.git
@@ -17,6 +5,10 @@
 [submodule "submodules/git-novice"]
 	path = submodules/git-novice
 	url = https://github.com/Southampton-RSG-Training/git-novice.git
+	branch = main
+[submodule "submodules/project-novice"]
+	path = submodules/project-novice
+	url = https://github.com/Southampton-RSG-Training/project-novice.git
 	branch = main
 [submodule "submodules/python-novice"]
 	path = submodules/python-novice
