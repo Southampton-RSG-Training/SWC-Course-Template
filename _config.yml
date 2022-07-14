@@ -7,6 +7,7 @@ kind: "course"
 # Overall title for the Workshop.
 # This variable is used to (optionally) add a title in the "jumbotron"
 # (the grey box at the top of the page), and to the extra pages.
+
 # Most workshops don't use extra pages. More information about extra
 # pages are included in the README:
 # https://github.com/carpentries/workshop-template#creating-extra-pages
@@ -162,3 +163,4 @@ plugins:
   - jekyll-remote-theme
   - jekyll-sitemap
   - jekyll-include-cache
+  - jekyll-target-blank
