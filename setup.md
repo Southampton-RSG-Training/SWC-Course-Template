@@ -1,4 +1,22 @@
 # Setup for all episodes.
+## Remote Desktop Client 
+
+In this workshop we will be using remote desktops that come pre-configured with all the
+resources you will need to complete the course. Before you start the course you will
+receive and email with your login information. Prior to that you will need to download
+the windows remote desktop client suitable for your operating system.
+
+Link to Microsoft's website, please use the table to pick the link to the app appropriate to your system:
+[Remote Desktop Clients](https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/clients/remote-desktop-clients)
+
+The remote desktop will be available to you for the time allocated to your workshop 
+and potentially include some 'out of hours' time.
+
+During the course we will have time dedicated to helping you install the software on 
+your own computer so afterwards you can continue to use the skills you have learnt.
+
+### The instructions to install the software on your own computer are provided below.
+
 ## Text Editor ##
 
 A text editor is the piece of software you use to view and write code. If you
@@ -113,27 +131,6 @@ $ git clone https://github.com/Southampton-RSG-Training/git-novice
 `cd` will move to your home directory, and `git clone` will download a copy of the materials.
 
 {% include links.md %}
-## Project Demo Repository
-
-We'll be showing you how to manage an example academic software project. 
-If you've completed our [Version Control with git workshop (linked here)](https://southampton-rsg-training.github.io/git-novice/) , you'll have an example project.
-If not, please [create a copy of our demo repository from this template (linked here)](https://github.com/Southampton-RSG-Training/project-novice-climate-analysis/generate),
-and name it `climate-analysis`. You don't need to run this code as part of the course! It's purely for demonstration purposes.
-
-## Install Visual Studio Code
-
-This workshop involves editing code files. 
-Whilst you can use any text editor to do this, some code editors or Integrated Development Environments (IDEs) have features designed to make coding easier.
-If you're already using a code editor or IDE (e.g. [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/) or [Spyder](https://www.spyder-ide.org/)), 
-stick with what you're comfortable with. If not, we'd recommend installing [Visual Studio Code (link here)](https://code.visualstudio.com/).
-
-### Windows / MacOS
-Go to [the Visual Studio Code website](https://code.visualstudio.com/), and download and run the installer.
-
-### Linux
-If you're on **Ubuntu**, Visual Studio Code should be available through the software centre! 
-If not, [follow the detailed instructions here](https://code.visualstudio.com/docs/setup/linux) to install it.
-
 ## Python Setup ##
 
 IDEs: PyCharm, Spyder, VS Code
