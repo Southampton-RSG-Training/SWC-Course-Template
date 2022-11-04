@@ -143,7 +143,7 @@ for n, lesson_info in enumerate(website_config['lessons']):
             #copy_tree(f"submodules/{lesson_name}/fig", f"{dest}/fig/")
             # Move the footer and navbar
             #Path(f"{dest}/_includes/").mkdir(parents=True, exist_ok=True)
-            #copy("_includes/workshop_footer.html", f"{dest}/_includes/")
+            #copy("_includes/footer.html", f"{dest}/_includes/")
             #copy("_includes/navbar.html", f"{dest}/_includes/")
 
 # Now need to do the same for slides, but have to do it afterwards because we
