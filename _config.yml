@@ -63,13 +63,6 @@ lessons:
     branch: main
     order: 2
     
-  - title: Data Cleaning with OpenRefine
-    gh-name: openrefine-data-cleaning
-    type: episode
-    branch: main
-    date: 14 January 2022
-    start-time: 15:00
-    order: 3
 
   - title: Building Programs with Python
     gh-name: python-novice
